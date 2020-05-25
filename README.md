@@ -4,7 +4,7 @@ Scripts de Web Scraping mostrados no Webinar "Automatizando processos com Python
 
 ## Iniciando
 
-Essas instruções vão mostrar como rodar os scripts em seu computador
+Essas instruções vão mostrar como rodar os scripts em seu computador. Cheque também o repo https://github.com/LucasMazei/sagu_webscraping para informações sobre a instalação do Geckodriver ou para os scripts referentes aos sistemas usados pela UNEMAT.
 
 ### Pré requisitos
 
@@ -44,4 +44,4 @@ $ python3 run.py runserver
 
 ## Autor:
 
-    Lucas Mateus Mazei Sobrinho - https://lnk.bio/oPiD
+Lucas Mateus Mazei Sobrinho - https://lnk.bio/oPiD
