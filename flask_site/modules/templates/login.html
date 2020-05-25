@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if  current_user.is_authenticated %}
+
+        <meta http-equiv="refresh" content="1; url='{{ url_for('index') }}'">
+
+    {% else %}
+
+        <h2> Login </h2>
+        <div class="col-md-4 col-md-offset-4">
+            <form action="" method="POST">
+                {{ form.csrf_token }}
+                <div class="form-group">
+                    <label>Nome de usuário</label>
+                    {{ form.username(class="form-control", placeholder="username") }}
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    {{ form.password(class="form-control") }}
+                </div>
+                <div class="checkbox">
+                    <label>
+                        {{ form.remember_me }} Lembrar-me
+                    </label>
+                </div>  
+                <button type="submit" class="btn btn-default">Login</button>
+            </form>
+        </div>
+
+    {% endif %}
+{% endblock %}

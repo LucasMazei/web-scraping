@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block content %} {% if
+current_user.is_authenticated and current_user.username == 'adm' %}
+
+<style>
+  label {
+    color: #00629b;
+  }
+</style>
+
+<h2>Cadastro</h2>
+<div class="col-md-4 col-md-offset-4">
+  <form action="" method="POST">
+    {{ form.csrf_token }}
+    <div class="form-group">
+      <label>Nome de usuário</label>
+      {{ form.username(class="form-control", placeholder="username") }}
+    </div>
+    <div class="form-group">
+      <label>Senha</label>
+      {{ form.password(class="form-control") }}
+    </div>
+    <div class="form-group">
+      <label>Nome Completo</label>
+      {{ form.name(class="form-control") }}
+    </div>
+    <div class="form-group">
+      <label>E-mail</label>
+      {{ form.email(class="form-control") }}
+    </div>
+    <button type="submit" class="btn btn-default">Cadastrar</button>
+  </form>
+</div>
+{% else %}
+<h2>Você não tem permissão para realizar essa operação!</h2>
+{% endif %} {% endblock %}
