@@ -24,7 +24,7 @@ $ sudo pacman -S python3 python3-pip git # Sistemas Linux baseados em Arch
 Os outros pré requisitos podem ser instalados usando:
 
 ```
-$ sudo pip3 install -r requirements.txt
+$ pip3 install -r requirements.txt # talvez --user seja necessário
 ```
 
 ### Instalando e usando
